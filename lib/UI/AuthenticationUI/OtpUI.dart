@@ -14,33 +14,26 @@ class _OtpUIState extends State<OtpUI> {
     return Scaffold(
       body: SafeArea(
           child: Column(
-        children: [
-          Container(
-            height: MediaQuery.of(context).size.height * 0.06,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Expanded(child: Container()),
-                Expanded(
-                  child: Image(
-                    image: AssetImage(
-                      'logo.png',
-                    ),
-                    width: MediaQuery.of(context).size.width * 0.1,
-                  ),
+            children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Container(),
+              Image(
+                image: AssetImage(
+                  'logo.png',
                 ),
-                Expanded(
-                  child: TextButton(
-                    style: TextButton.styleFrom(primary: Colors.orange),
-                    onPressed: () {},
-                    child: Text(
-                      'Cancel',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ),
+                width: MediaQuery.of(context).size.width * 0.07,
+              ),
+              TextButton(
+                style: TextButton.styleFrom(primary: Colors.orange),
+                onPressed: () {},
+                child: Text(
+                  'Cancel',
+                  style: TextStyle(fontSize: 16),
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
           SizedBox(
             height: 20,

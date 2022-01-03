@@ -11,45 +11,45 @@ class _AccountInfoUIState extends State<AccountInfoUI> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+//        automaticallyImplyLeading: false,
+      leading: Container(),
+        title: Align(
+          alignment: Alignment.center,
+          child: Image(
+            image: AssetImage(
+              'logo.png',
+            ),
+            width: MediaQuery.of(context).size.height * 0.05,
+          ),
+        ),
+        actions: [
+          TextButton(
+            style: TextButton.styleFrom(primary: Colors.orange),
+            onPressed: () {},
+            child: Text(
+              'Cancel',
+              style: TextStyle(fontSize: 16),
+            ),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
+            padding: const EdgeInsets.all(16.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(child: Container()),
-                      Expanded(
-                        child: Image(
-                          image: AssetImage(
-                            'logo.png',
-                          ),
-                          width: MediaQuery.of(context).size.width * 0.1,
-                        ),
-                      ),
-                      Expanded(
-                        child: TextButton(
-                          style: TextButton.styleFrom(primary: Colors.orange),
-                          onPressed: () {},
-                          child: Text(
-                            'Skip',
-                            style: TextStyle(fontSize: 16),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
                 Text(
                   'Create an account',
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
                 Text(
                   'Welcome Friend enter your details so lets get started in booking table',
+                  textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 15,
                   ),
@@ -116,7 +116,7 @@ class _AccountInfoUIState extends State<AccountInfoUI> {
                       // color: Colors.orange,
                       minWidth: MediaQuery.of(context).size.width * 0.7,
                       onPressed: () {
-                        // Navigator.of(context).pushNamed('/accountInfoUI');
+                         Navigator.of(context).pushNamed('/forgetpasswordUI');
                       }),
                 ),
               ],

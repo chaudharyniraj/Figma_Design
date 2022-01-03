@@ -1,3 +1,4 @@
+import 'package:e_commerce/UI/AuthenticationUI/ForgetpasswordUI.dart';
 import 'package:e_commerce/UI/AuthenticationUI/OnBoardingUI.dart';
 import 'package:flutter/material.dart';
 
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
           '/loginUI': (context) => LoginUI(),
           '/otpUI': (context) => OtpUI(),
           '/accountInfoUI': (context) => AccountInfoUI(),
+          '/forgetpasswordUI': (context) => ForgetpasswordUI(),
         });
   }
 }
