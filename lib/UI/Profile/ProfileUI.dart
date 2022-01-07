@@ -123,7 +123,9 @@ class _ProfileUIState extends State<ProfileUI> {
                             ),),
                             IconButton(
                               icon: Icon(Icons.arrow_forward_ios),
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).pushNamed('/rewardsUI');
+                              },
                             )
                           ],
                         ),
