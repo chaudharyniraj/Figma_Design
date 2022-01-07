@@ -122,6 +122,12 @@
       "languageVersion": "2.14"
     },
     {
+      "name": "responsive_navigation_bar",
+      "rootUri": "file:///C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/responsive_navigation_bar-3.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -200,7 +206,7 @@
       "languageVersion": "2.15"
     }
   ],
-  "generated": "2022-01-03T13:34:55.895578Z",
+  "generated": "2022-01-05T05:31:36.237084Z",
   "generator": "pub",
   "generatorVersion": "2.15.1"
 }

@@ -54,7 +54,9 @@ class _OnBoardingUIState extends State<OnBoardingUI> {
                 alignment: Alignment.bottomRight,
                 child: TextButton(
                   style: TextButton.styleFrom(primary: Colors.orange),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/profileUI');
+                  },
                   child: Text(
                     'Skip',
                     style: TextStyle(fontSize: 20),

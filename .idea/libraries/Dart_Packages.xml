@@ -142,6 +142,13 @@
             </list>
           </value>
         </entry>
+        <entry key="responsive_navigation_bar">
+          <value>
+            <list>
+              <option value="C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/responsive_navigation_bar-3.0.5/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="sky_engine">
           <value>
             <list>
@@ -247,6 +254,7 @@
       <root url="file://C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/otp_pin_field-1.0.0/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/path-1.8.0/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/petitparser-4.4.0/lib" />
+      <root url="file://C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/responsive_navigation_bar-3.0.5/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/source_span-1.8.1/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/stack_trace-1.10.0/lib" />
       <root url="file://C:/flutter/.pub-cache/hosted/pub.flutter-io.cn/stream_channel-2.1.0/lib" />
