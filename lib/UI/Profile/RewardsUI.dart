@@ -6,6 +6,49 @@ class RewardsUI extends StatefulWidget {
 }
 
 class _RewardsUIState extends State<RewardsUI> {
+  ScrollController  _scrollController = ScrollController();
+
+  Widget ListofRewards(BuildContext context, int index, double width, double height){
+
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 8.0),
+      height:height*0.2,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+        border: Border.all(
+          color: Colors.orange,
+        ),
+        color: Colors.white,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Points: $index',style: TextStyle(
+                  color: Colors.orange,
+                  fontSize: 20,
+                ),),
+                Divider(),
+                Text('Hotel Name',style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+                ),),
+                Text('Hotel Address'),
+                Text('Book Id:'),
+                Text('Date:')
+              ],
+            ),
+            Image.asset('profile.png',width: width*0.3,),
+          ],
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -15,7 +58,7 @@ class _RewardsUIState extends State<RewardsUI> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -23,6 +66,7 @@ class _RewardsUIState extends State<RewardsUI> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         IconButton(
                           icon: Icon(Icons.arrow_back_ios),
@@ -32,9 +76,9 @@ class _RewardsUIState extends State<RewardsUI> {
                         ),
                         SizedBox(height: height*0.02,),
                         Text(
-                          'Profile',
+                          'Rewards',
                           style: TextStyle(
-                            fontSize: 30,
+                            fontSize: 25,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -62,6 +106,15 @@ class _RewardsUIState extends State<RewardsUI> {
                       ),
                     )
                   ],
+                ),
+                SizedBox(height: height*0.01,),
+                ListView.builder(
+                  controller: _scrollController,
+                  itemCount: 3,
+                  shrinkWrap: true,
+                  itemBuilder: (context, index){
+                    return ListofRewards(context, index, width, height);
+                  },
                 ),
               ],
             ),
