@@ -9,7 +9,8 @@ class _RecentBookingUIState extends State<RecentBookingUI> {
 
 
   ScrollController  _scrollController = ScrollController();
-
+//  List<bool> _selections =List.generate(2, (_) => false);
+  List<bool> _isSelected =[true,false];
   Widget ListofRecentBooking(BuildContext context, int index, double width, double height){
 
     return Container(
@@ -139,21 +140,44 @@ class _RecentBookingUIState extends State<RecentBookingUI> {
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        Container(
-                          height:height*0.07,
-                          width: width*0.9,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(30)),
-                            border: Border.all(
-                              color: Colors.orange,
-                            ),
-                            color: Colors.white,
-                          ),
-                          child: Row(
+                        SizedBox(height: height*0.02,),
+                        ToggleButtons(
                             children: [
-
+                              Container(
+                                width: (width-50)/2,
+                                  child: Text('Pending',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontSize: 20.0),
+                                  )
+                              ),
+                              Container(
+                                  width: (width-50)/2,
+                                  child: Text('Complete',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(fontSize: 20.0),
+                                  )
+                              )
                             ],
-                          ),
+                            isSelected: _isSelected,
+                            onPressed: (int index){
+                                setState(() {
+                                  for (int newIndex = 0; newIndex < _isSelected.length; newIndex++) {
+                                    if (newIndex == index) {
+                                      _isSelected[newIndex] = true;
+                                    } else {
+                                      _isSelected[newIndex] = false;
+                                    }
+                                  }
+//                                  _selections[index] = !_selections[index];
+                                });
+                            },
+                          color: Colors.black,
+                          selectedColor: Colors.white,
+                          fillColor: Colors.orange,
+                          selectedBorderColor: Colors.deepOrange,
+                          borderColor: Colors.orange,
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+
                         )
                       ],
                     ),

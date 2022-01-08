@@ -2,6 +2,7 @@ import 'package:e_commerce/UI/AuthenticationUI/ForgetpasswordUI.dart';
 import 'package:e_commerce/UI/AuthenticationUI/OnBoardingUI.dart';
 import 'package:e_commerce/UI/GeneralUI/HomeScreenUI.dart';
 import 'package:e_commerce/UI/GeneralUI/NavigationbarUI.dart';
+import 'package:e_commerce/UI/Profile/FaqUI.dart';
 import 'package:e_commerce/UI/Profile/ProfileUI.dart';
 import 'package:e_commerce/UI/Profile/RecentBookingUI.dart';
 import 'package:e_commerce/UI/Profile/RewardsUI.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
           '/profileUI': (context) => ProfileUI(),
           '/rewardsUI': (context) => RewardsUI(),
           '/recentBookingUI': (context) => RecentBookingUI(),
+          '/faqUI': (context) => FaqUI(),
         });
   }
 }
